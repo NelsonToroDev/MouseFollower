@@ -24,6 +24,15 @@ export const FollowMouse = () => {
     }
   }, [enabled])
 
+  // change class name to add and to remove cursor
+  useEffect(() => {
+    document.body.classList.toggle('no-cursor', enabled)
+
+    return () => {
+      document.body.classList.remove('no-cursor')
+    }
+  }, [enabled])
+
   return (
     <>
       <div
