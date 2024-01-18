@@ -1,13 +1,17 @@
 import { useState } from 'react'
 import './App.css'
+import { FollowMouse } from './FollowMouse'
 
-function App () {
-  const [count, setCount] = useState(0)
+function App() {
+  const [mounted, setMounted] = useState(true)
 
   return (
-    <h3>
-      hello
-    </h3>
+    <main>
+      {mounted && <FollowMouse />}
+      <button onClick={() => setMounted(!mounted)}>
+        {mounted ? 'Unmount' : 'Mount'} Follow Mouse
+      </button>
+    </main>
   )
 }
 
