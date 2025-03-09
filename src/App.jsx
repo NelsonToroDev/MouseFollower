@@ -2,7 +2,7 @@ import { useState } from 'react'
 import './App.css'
 import { FollowMouse } from './FollowMouse'
 
-function App() {
+function App () {
   const [mounted, setMounted] = useState(true)
 
   return (
